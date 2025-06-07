@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DarkLight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #eee;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .login-button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .welcome-section, .new-arrival-section, .catalogue-section, .design-your-own, .feedback {
+      padding: 3rem 2rem;
+      text-align: left;
+    }
+
+    .welcome-section h1,
+    .new-arrival-section h2,
+    .catalogue-section h2,
+    .design-your-own h1,
+    .feedback h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .catalogue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .catalogue-item, .product-card, .feedback-card {
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .catalogue-item img, .product-card img, .feedback-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-grid, .feedback-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .design-your-own ol {
+      max-width: 700px;
+      margin: 20px auto;
+      padding-left: 20px;
+    }
+
+    .start-button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 20px;
+      font-size: 18px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="DarkLight Logo" />
+      <h2>DarkLight</h2>
+    </div>
+    <nav>
+      <a href="#newarrival">New Arrival</a>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#custom">Custom</a>
+      <a href="#">Cart</a>
+      <a href="#" class="login-button">Login</a>
+    </nav>
+  </header>
+
+  <section class="welcome-section">
+    <h1>Welcome to DarkLight !</h1>
+    <p>For new user, you can claim the coupon right after register to our website. What are you waiting for? Click button below to register</p>
+    <button class="register-btn">Register</button>
+  </section>
+
+  <section class="new-arrival-section" id="newarrival">
+    <h2>New Arrival !</h2>
+    <div class="arrival-content">
+      <div class="arrival-image">
+        <img src="bajubesar.jpeg" alt="New Design Shirt"/>
+      </div>
+      <div class="arrival-text">
+        <h3>BEST PRICE!</h3>
+        <p>The new design just come out. Check it out and don’t forget to buy it!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalogue-section" id="catalogue">
+    <h2>Catalogue</h2>
+    <div class="catalogue-grid">
+      <div class="catalogue-item">
+        <img src="baju1.jpeg" alt="Design 1">
+        <h4>RM 40</h4>
+        <p>Sublimation</p>
+        <p>jersey, Material (microfiber)</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="baju2.jpeg" alt="Design 2">
+        <h4>RM 40</h4>
+        <p>Sublimation</p>
+        <p>jersey, Material (microfiber)</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="baju3.jpeg" alt="Design 3">
+        <h4>RM 40</h4>
+        <p>Sublimation</p>
+        <p>jersey, Material (microfiber)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="design-steps-section">  
+  <h1>Step to design your jersey</h1>
+<div class="steps-container">
+  <div class="step">
+    <h3>1. Sketch</h3>
+    <p>Sketch your design on paper or any software then submit it in PNG file. We will send confirmations of design in software for sketch.</p>
+    
+    <h3>3. Choose Size & Quantity</h3>
+    <p>Choose your size and put the amount of your shirt.</p>
+    
+    <h3>5. Delivery</h3>
+    <p>After your submission the delivery will be around 3 weeks.</p>
+  </div>
+
+  <div class="step">
+    <h3>2. Filling form</h3>
+    <p>Fill in the form including your fullname, contact number, email, material for design, and collar type.</p>
+    
+    <h3>4. Make Payment</h3>
+    <p>Make the payment by choosing your payment method.</p>
+  </div>
+</div>
+</section>
+
+  <section class="feedback">
+    <h1>Feedback</h1>
+    <div class="feedback-grid">
+      <div class="feedback-card">
+        <img src="147c7467-c408-4b31-80c8-b4f5c4e152a3.png" alt="Feedback 1">
+        <p>“Amazing quality and fast delivery!”</p>
+      </div>
+      <div class="feedback-card">
+        <img src="b3e71348-539f-4006-ae06-13f4e812c961.png" alt="Feedback 2">
+        <p>“The customization process was super easy.”</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
