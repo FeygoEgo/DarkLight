@@ -213,3 +213,115 @@
     </button>
   </a>
 </div>
+<!-- Chat Support Floating Button & Box -->
+<style>
+  #chatBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  #chatBox {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #chatHeader {
+    background: #25D366;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  #chatMessages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+
+  #chatInput {
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+
+  #chatInput input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+  }
+
+  #chatInput button {
+    padding: 8px 15px;
+    border: none;
+    background: #25D366;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+<!-- Floating Button -->
+<button id="chatBtn">💬</button>
+
+<!-- Chat Box -->
+<div id="chatBox">
+  <div id="chatHeader">Customer Support</div>
+  <div id="chatMessages"></div>
+  <div id="chatInput">
+    <input type="text" id="userInput" placeholder="Tulis mesej...">
+    <button onclick="sendMsg()">Hantar</button>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  const chatBtn = document.getElementById("chatBtn");
+  const chatBox = document.getElementById("chatBox");
+  const chatMessages = document.getElementById("chatMessages");
+  const userInput = document.getElementById("userInput");
+
+  chatBtn.addEventListener("click", () => {
+    chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
+  });
+
+  function sendMsg() {
+    const msg = userInput.value.trim();
+    if (msg !== "") {
+      const userBubble = document.createElement("div");
+      userBubble.textContent = "🧑: " + msg;
+      chatMessages.appendChild(userBubble);
+      userInput.value = "";
+
+      // Auto reply (fake bot)
+      setTimeout(() => {
+        const botBubble = document.createElement("div");
+        botBubble.textContent = "🤖: Terima kasih atas mesej anda. Kami akan hubungi anda secepat mungkin!";
+        chatMessages.appendChild(botBubble);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 1000);
+    }
+  }
+</script>
+
