@@ -31,3 +31,18 @@ p {
   color: #666;
   margin-bottom: 20px;
 }
+
+.select-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.select-button:hover {
+  background-color: #333;
+}
