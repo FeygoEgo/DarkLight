@@ -46,3 +46,16 @@ p {
 .select-button:hover {
   background-color: #333;
 }
+
+.order-btn {
+  background-color: black;
+  color: white;
+  padding: 4px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+  
+
