@@ -58,4 +58,20 @@ p {
 }
 
   
+.content-size {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.photo-size img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+
 
