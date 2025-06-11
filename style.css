@@ -5,6 +5,19 @@
   padding: 20px 0;
 }
 
+.order-now-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.order-now-button:hover {
+  background-color: #218838;
+}
+
 .step {
   flex: 1;
 }
