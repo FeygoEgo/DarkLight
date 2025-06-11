@@ -267,11 +267,11 @@
 
 <!-- Chat Box -->
 <div id="chatBox">
-  <div id="chatHeader">Customer Support</div>
+  <div id="chatHeader">Live Chat Customer Support</div>
   <div id="chatMessages"></div>
   <div id="chatInput">
     <input type="text" id="userInput" placeholder="Tulis mesej...">
-    <button onclick="sendMsg()">Hantar</button>
+    <button onclick="sendMsg()">Send</button>
   </div>
 </div>
 
@@ -297,7 +297,7 @@
       // Auto reply (fake bot)
       setTimeout(() => {
         const botBubble = document.createElement("div");
-        botBubble.textContent = "🤖: Terima kasih atas mesej anda. Kami akan hubungi anda secepat mungkin!";
+        botBubble.textContent = "🤖: Thank you for the message. We will contact you soon as possible!";
         chatMessages.appendChild(botBubble);
         chatMessages.scrollTop = chatMessages.scrollHeight;
       }, 1000);
