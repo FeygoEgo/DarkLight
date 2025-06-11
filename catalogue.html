@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catalogue - DarkLight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #eee;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .catalogue-section {
+      padding: 3rem 2rem;
+    }
+
+    .catalogue-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .catalogue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .catalogue-item {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .catalogue-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .catalogue-item h4 {
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .catalogue-item p {
+      margin: 0.2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="DarkLight Logo" />
+      <h2>DarkLight</h2>
+    </div>
+    <nav>
+      <a href="index.html#newarrival">New Arrival</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="custom.html">Custom</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMhbCW4vYl4hz7JgfWdSyEtr1EHSvgbr46qH4zVwAtgpgWWQ/viewform?usp=sharing&ouid=101155767169123449050" target="_blank" class="order-now-button">Order Now</a>
+    </nav>
+  </header>
+
+  <section class="catalogue-section">
+    <h2>Full Catalogue</h2>
+    <div class="catalogue-grid">
+      <div class="catalogue-item">
+        <a href="design1.html"><img src="baju1.jpeg" alt="Design 1"></a>
+        <h4>RM 40</h4>
+        <p>Sublimation</p>
+        <p>Microfiber Jersey</p>
+      </div>
+      <div class="catalogue-item">
+        <a href="design2.html"><img src="baju2.jpeg" alt="Design 2"></a>
+        <h4>RM 40</h4>
+        <p>Sublimation</p>
+        <p>Microfiber Jersey</p>
+      </div>
+      <div class="catalogue-item">
+        <a href="design3.html"><img src="baju3.jpeg" alt="Design 3"></a>
+        <h4>RM 40</h4>
+        <p>Sublimation</p>
+        <p>Microfiber Jersey</p>
+      </div>
+      <div class="catalogue-item">
+        <a href="#"><img src="baju4.jpeg" alt="Design 4"></a>
+        <h4>RM 45</h4>
+        <p>Sublimation</p>
+        <p>Long Sleeve Jersey</p>
+      </div>
+      <div class="catalogue-item">
+        <a href="#"><img src="baju5.jpeg" alt="Design 5"></a>
+        <h4>RM 42</h4>
+        <p>Cotton</p>
+        <p>T-Shirt Jersey</p>
+      </div>
+      <div class="catalogue-item">
+        <a href="#"><img src="baju6.jpeg" alt="Design 6"></a>
+        <h4>RM 50</h4>
+        <p>Special Edition</p>
+        <p>Custom Logo</p>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://wa.me/601132557961" target="_blank">
+      <button style="padding: 15px 40px; font-size: 18px; background-color: #25D366; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        WhatsApp to purchase Darklight Jersey now!
+      </button>
+    </a>
+  </div>
+
+  <!-- Floating Chat Button (same as your index.html) -->
+  <style>
+    #chatBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #353535;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 999;
+    }
+  </style>
+  <button id="chatBtn" onclick="window.open('https://wa.me/601132557961','_blank')">💬</button>
+</body>
+</html>
