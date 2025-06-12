@@ -5,10 +5,32 @@
   padding: 20px 0;
 }
 
+nav a {
+  font-size: 20px; /* adjust this to set the text size */
+  padding: 10px 15px; /* space inside the buttons */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+nav a.order-btn {
+  font-size: 20px; /* adjust this to set the text size */
+  background-color: #000000; /* highlight order button */
+  border-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+nav a.order-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+    padding: 20px 40px;
+
+}
 .order-now-button {
-  background-color: #28a745;
+  background-color: #000000;
   color: white;
-  padding: 10px 20px;
+  padding: 20px 40px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
