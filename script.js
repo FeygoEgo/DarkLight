@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const backLink = document.querySelector(".back-link");
   backLink.addEventListener("click", (e) => {
-    const confirmBack = confirm("Are you sure you want to return to the catalogue?");
+    const confirmBack = confirm("Are you sure you want to return back?");
     if (!confirmBack) {
       e.preventDefault(); 
     }
