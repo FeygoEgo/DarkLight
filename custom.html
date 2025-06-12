@@ -58,7 +58,17 @@
       text-align: left;
       padding-left: 20px;
     }
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
 
+    .image-row img {
+      width: 30%; /* Adjust as needed */
+      border-radius: 10px;
+    }
     .start-button {
       display: inline-block;
       margin-top: 30px;
@@ -97,57 +107,70 @@
     <h1>Steps to Design Your Jersey</h1>
   <div class="step">
     <h3>1. Sketch</h3>
-    <p>Sketch your design on paper or any software then submit it in PNG file. We will send confirmations of design in software for sketch.</p>
+    <p>Sketch your design on paper or any software then submit it in PDF file. We will send confirmations of design in software for sketch.</p>
     
     <h3>2. Filling form</h3>
     <p>Fill in the form including your full name, ic number, contact number, email, delivery address, poscode.</p>
     
-    <h3>3. Choose Size & Quantity</h3>
-    <p>Choose your size and put the amount of your shirt.</p>
-    
+    <h3>3. Make an Excel</h3>
+    <p>Choose your size, quantity, collar type and number (optional)</p>
+    <div class="image-row">
+      <img src="muslim.jpg" alt="Front View" />
+      <img src="muslimah.jpg" alt="Back View" />
+    </div>
+
     <h3>4. Make Payment</h3>
-    <p>Make the payment by choosing your payment method.</p>
+    <p>Please calculate the amount and make the payment by QR payment method. Only 50% deposit.</p>
 
     <h3>5. Delivery</h3>
-    <p>After your submission the delivery will be around 3 weeks.</p>
+    <p>After your submission the delivery will be around 3 weeks. Full payment will be notify before delivery.</p>
   </div>
 
 
      <!-- Choose Material & Collar Type Section -->
 <section style="max-width: 700px; margin: 3rem auto;">
   <h2>Material & Collar Type</h2>
-  <p style="color: grey;">These are all material and collar types that are available.</p>
+  <p style="color: grey(0, 1%, 44%);">These are all material and collar types that are available.</p>
 
+  <!-- Material Section -->
   <div style="margin-top: 1rem;">
     <strong>Material:</strong>
     <div style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 10px;">
-      <button class="select-button">Lycra</button>
-      <button class="select-button">Microfiber</button>
-      <button class="select-button">Mini Eyelet</button>
-      <button class="select-button">Eyelet</button>
+      <button class="material-button" data-img="lycra.png">Lycra</button>
+      <button class="material-button" data-img="micro.png">Microfiber</button>
+      <button class="material-button" data-img="mini.png">Mini Eyelet</button>
+      <button class="material-button" data-img="eyelet.png">Eyelet</button>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
+      <div style="overflow: hidden; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
+        <img id="material-image" src="lycra.png"
+             style="max-width: 100%; max-height: 100%; transition: transform 0.5s ease, opacity 0.5s ease;" />
+      </div>
     </div>
   </div>
 
-<div style="margin-top: 2rem;">
-  <strong>Collar Type:</strong>
-  <div style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 10px;">
-    <button class="select-button" data-img="polo.png">Polo</button>
-    <button class="select-button" data-img="round.png">Roundneck</button>
-    <button class="select-button" data-img="vneck.png">V-neck</button>
-    <button class="select-button" data-img="retro.png">Retro</button>
-    <button class="select-button" data-img="nfl.png">NFL collar</button>
-    <button class="select-button" data-img="mandarin.png">Mandarin</button>
-  </div>
+  <!-- Collar Section -->
+  <div style="margin-top: 2rem;">
+    <strong>Collar Type:</strong>
+    <div style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 10px;">
+      <button class="collar-button" data-img="polo.png">Polo</button>
+      <button class="collar-button" data-img="round.png">Roundneck</button>
+      <button class="collar-button" data-img="vneck.png">V-neck</button>
+      <button class="collar-button" data-img="retro.png">Retro</button>
+      <button class="collar-button" data-img="nfl.png">NFL collar</button>
+      <button class="collar-button" data-img="mandarin.png">Mandarin</button>
+    </div>
 
-<!-- Centering Wrapper -->
-<div style="display: flex; justify-content: center; align-items: center; margin-top: 2rem;">
-  <div id="collar-image-wrapper" style="overflow: hidden; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
-    <img id="collar-image" src="polo.png" 
-         style="max-width: 100%; max-height: 100%; transition: transform 0.5s ease, opacity 0.5s ease;" />
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
+      <div style="overflow: hidden; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
+        <img id="collar-image" src="polo.png"
+             style="max-width: 100%; max-height: 100%; transition: transform 0.5s ease, opacity 0.5s ease;" />
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-</div>
 
 
 </section>
@@ -301,6 +324,47 @@
         }, 1000);
       }
     }
+
+
+  // Handle Material Selection
+  document.querySelectorAll(".material-button").forEach(button => {
+    button.addEventListener("click", function () {
+      // Image Transition
+      const materialImg = document.getElementById("material-image");
+      materialImg.style.opacity = 0;
+      setTimeout(() => {
+        materialImg.src = this.getAttribute("data-img");
+        materialImg.style.opacity = 1;
+      }, 250);
+
+      // Button Styling
+      document.querySelectorAll(".material-button").forEach(btn => {
+        btn.classList.remove("selected");
+      });
+      this.classList.add("selected");
+    });
+  });
+
+  // Handle Collar Selection
+  document.querySelectorAll(".collar-button").forEach(button => {
+    button.addEventListener("click", function () {
+      // Image Transition
+      const collarImg = document.getElementById("collar-image");
+      collarImg.style.opacity = 0;
+      setTimeout(() => {
+        collarImg.src = this.getAttribute("data-img");
+        collarImg.style.opacity = 1;
+      }, 250);
+
+      // Button Styling
+      document.querySelectorAll(".collar-button").forEach(btn => {
+        btn.classList.remove("selected");
+      });
+      this.classList.add("selected");
+    });
+  });
+
+
   const buttons = document.querySelectorAll('.select-button');
   const collarImage = document.getElementById('collar-image');
 
@@ -327,6 +391,7 @@
       }, 300);
     });
   });
+  
 </script>
 </body>
 </html>
