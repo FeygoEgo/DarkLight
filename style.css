@@ -71,7 +71,36 @@ p {
   border-radius: 10px;
 }
 
+.footer {
+    border-top: 1px solid #ccc;
+    background-color: #f0f0f0;
+    padding: 1rem 2rem;
+    margin-top: 40px;
+  }
 
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-left {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .footer-right {
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .footer-right strong {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
 
 
 
