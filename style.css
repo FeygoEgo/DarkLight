@@ -1,3 +1,8 @@
+.welcome-section, .new-arrival-section, .catalogue-section, .design-your-own, .feedback {
+  padding: 1rem 2.5rem;
+  text-align: left;
+}
+
 .steps-container {
   display: flex;
   justify-content: space-between;
